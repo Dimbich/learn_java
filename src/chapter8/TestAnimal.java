@@ -4,13 +4,12 @@ public class TestAnimal {
 
     public static void main(String[] args) {
 
-        Animal[] animals = {
-                new Wolf(),
-                new Cat(),
-                new Lion()
-        };
+        AnimalList  animalList = new AnimalList();
+        animalList.add(new Wolf());
+        animalList.add(new Cat());
+        animalList.add(new Lion());
 
-        for (Animal animal : animals) {
+        for (Animal animal : animalList.getAnimals()) {
             animal.makeNoise();
             animal.eat();
             animal.sleep();
